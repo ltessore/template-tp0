@@ -1,5 +1,6 @@
 package ar.fiuba.tdd.template.tp0;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,8 +34,7 @@ public class RegExGenerator {
         if (set.length() > 1) {
             int index = (this.random.nextInt(set.length() - 1));
             return set.charAt(index);
-        }
-        else if (set.length() == 1) {
+        } else if (set.length() == 1) {
             return set.charAt(0);
         } else {
             return (char) (this.random.nextInt(255));
@@ -61,7 +61,10 @@ public class RegExGenerator {
                 }
             }
         } else {
-            buffer.append(this.charRandomIn(bufferSet) + character);
+            buffer.append(this.charRandomIn(bufferSet));
+            if (character != '\0') {
+                buffer.append(character);
+            }
         }
         return buffer.toString();
     }

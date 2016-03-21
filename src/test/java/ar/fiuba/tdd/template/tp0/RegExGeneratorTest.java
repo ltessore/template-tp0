@@ -54,11 +54,11 @@ public class RegExGeneratorTest {
         assertTrue(validate("\\@.h?", 1));
     }
 
- /*WARNING: Descomentar
+
     @Test
     public void testCharacterSet() {
         assertTrue(validate("[abc]", 1));
-    }*/
+    }
 
     @Test
     public void testCharacterSetWithQuantifiers() {
